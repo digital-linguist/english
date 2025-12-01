@@ -3,7 +3,6 @@ import './NegotiationPhase.css';
 
 const NegotiationPhase = ({ onChoice, onComplete }) => {
   const [currentStage, setCurrentStage] = useState(0);
-  const [negotiationPoints, setNegotiationPoints] = useState(0);
   const [selectedOption, setSelectedOption] = useState(null);
   const [stageCompleted, setStageCompleted] = useState(false);
   const [showFeedback, setShowFeedback] = useState(false);
@@ -146,11 +145,7 @@ const NegotiationPhase = ({ onChoice, onComplete }) => {
       isPositive: option.points >= 30
     });
     
-    // Add points
-    const newPoints = negotiationPoints + option.points;
-    setNegotiationPoints(newPoints);
-    
-    // Record choice
+    // Record choice (points передаются, но не показываются)
     onChoice(`${negotiationStages[currentStage].title}: ${option.strategy}`, option.points);
     
     // Show feedback
@@ -182,7 +177,7 @@ const NegotiationPhase = ({ onChoice, onComplete }) => {
             <span className="stat-value">{currentStage + 1}/{negotiationStages.length}</span>
           </div>
           <div className="stat-card">
-            <span className="stat-label">Progress</span>
+            <span className="stat-label">Status</span>
             <span className="stat-value">
               {stageCompleted ? 'Completed' : 'In Progress'}
             </span>
@@ -229,7 +224,6 @@ const NegotiationPhase = ({ onChoice, onComplete }) => {
                     <div className="option-strategy">
                       <span className="strategy-label">Strategy:</span> {option.strategy}
                     </div>
-                    {/* Убрано отображение баллов: <div className="option-points">+{option.points} points</div> */}
                   </div>
                 </button>
               ))}
@@ -240,14 +234,14 @@ const NegotiationPhase = ({ onChoice, onComplete }) => {
             <div className={`feedback-card ${feedback.isPositive ? 'positive' : 'constructive'}`}>
               <div className="feedback-header">
                 <h4>🎯 Expert Feedback</h4>
-                <span className="points-earned">
-                  {/* Убрано отображение набранных баллов в фидбеке */}
+                <span className="feedback-indicator">
                   {feedback.isPositive ? '✓ Effective Choice' : '⚠️ Could Be Improved'}
                 </span>
               </div>
               <p className="feedback-text">{feedback.text}</p>
               <div className="strategy-evaluation">
                 <p><strong>Strategy Used:</strong> {currentStageData.options[selectedOption]?.strategy}</p>
+                <p><strong>Cultural Appropriateness:</strong> {feedback.isPositive ? 'High' : 'Needs adjustment'}</p>
               </div>
               {currentStage < negotiationStages.length - 1 ? (
                 <div className="next-stage-notice">
@@ -265,12 +259,12 @@ const NegotiationPhase = ({ onChoice, onComplete }) => {
         <div className="negotiation-guide">
           <h4>💡 Negotiation Language Guide</h4>
           <div className="guide-content">
-            <p><strong>Remember:</strong> Choose responses based on cultural appropriateness, strategic thinking, and language effectiveness, not just intuition.</p>
+            <p><strong>Remember:</strong> Choose responses based on:</p>
             <ul className="guide-list">
-              <li><strong>Collaborative Language:</strong> Builds rapport and shared ownership</li>
-              <li><strong>Problem-Solving Approach:</strong> Focuses on mutual gains and creative solutions</li>
-              <li><strong>Cultural Adaptation:</strong> Considers your counterpart's cultural background</li>
-              <li><strong>Strategic Flexibility:</strong> Balances firmness with willingness to adapt</li>
+              <li><strong>Cultural Appropriateness:</strong> Consider your counterpart's cultural background</li>
+              <li><strong>Strategic Thinking:</strong> Focus on long-term relationship building</li>
+              <li><strong>Language Effectiveness:</strong> Use precise, professional language</li>
+              <li><strong>Problem-Solving Approach:</strong> Aim for win-win solutions</li>
             </ul>
           </div>
         </div>

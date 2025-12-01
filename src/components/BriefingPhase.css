@@ -1,0 +1,594 @@
+.briefing-phase {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.phase-header {
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 20px;
+}
+
+.phase-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.3;
+}
+
+.phase-description {
+  font-size: 1.3rem;
+  color: #b2ebf2;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ИНСТРУКЦИИ ДЛЯ СТУДЕНТОВ */
+.student-instructions {
+  margin-bottom: 50px;
+}
+
+.instructions-card {
+  background: linear-gradient(135deg, rgba(255, 180, 71, 0.1), rgba(255, 65, 108, 0.1));
+  border-radius: 20px;
+  padding: 35px;
+  border: 3px solid rgba(255, 180, 71, 0.3);
+}
+
+.instructions-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.instructions-icon {
+  font-size: 3rem;
+}
+
+.instructions-header h3 {
+  font-size: 1.8rem;
+  color: #ffb347;
+}
+
+.instruction-step {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 35px;
+  padding-bottom: 35px;
+  border-bottom: 2px dashed rgba(255, 255, 255, 0.1);
+  align-items: flex-start;
+}
+
+.instruction-step:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.step-number {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+
+.step-content h4 {
+  color: white;
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+}
+
+.step-content p {
+  color: #e0f7fa;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.instruction-tip {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 30px;
+  color: #ffb347;
+  font-size: 1.1rem;
+  border-left: 4px solid #ffb347;
+}
+
+.instruction-tip strong {
+  color: #ffb347;
+  margin-right: 10px;
+}
+
+/* УВЕЛИЧЕННЫЕ РАССТОЯНИЯ В МИССИИ */
+.mission-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.mission-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 35px;
+  border: 2px solid transparent;
+  transition: all 0.3s;
+  height: 100%;
+}
+
+.mission-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0, 198, 255, 0.3);
+}
+
+.mission-card.client {
+  border-left: 6px solid #00c6ff;
+}
+
+.mission-card.opponent {
+  border-left: 6px solid #ff416c;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 35px;
+}
+
+.card-icon {
+  font-size: 3rem;
+}
+
+.card-header h3 {
+  font-size: 1.6rem;
+  color: white;
+  line-height: 1.3;
+}
+
+.card-content ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.spaced-item {
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  line-height: 1.5;
+}
+
+.spaced-item strong {
+  min-width: 140px;
+  color: #80deea;
+  font-size: 1.1rem;
+}
+
+.spaced-item:last-child {
+  border-bottom: none;
+}
+
+.priority {
+  margin-top: 30px;
+  padding: 25px;
+  background: rgba(0, 198, 255, 0.1);
+  border-radius: 15px;
+  border-left: 5px solid #00c6ff;
+}
+
+.priority-label {
+  font-weight: 600;
+  color: #00c6ff;
+  margin-right: 15px;
+  font-size: 1.1rem;
+}
+
+.priority-value {
+  color: white;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.cultural-note {
+  margin-top: 30px;
+  padding: 25px;
+  background: rgba(255, 180, 71, 0.1);
+  border-radius: 15px;
+  border-left: 5px solid #ffb347;
+  color: #ffb347;
+  font-weight: 500;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.cultural-note strong {
+  color: #ffb347;
+}
+
+/* СЦЕНАРИЙ */
+.scenario-details {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 20px;
+  padding: 40px;
+  margin-bottom: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.scenario-details h3 {
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  color: #80deea;
+}
+
+.scenario-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 35px;
+  color: #e0f7fa;
+}
+
+.key-challenges h4 {
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+  color: #ffb347;
+}
+
+.challenges-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.challenge {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.challenge:hover {
+  background: rgba(0, 198, 255, 0.1);
+  border-color: #00c6ff;
+  transform: translateY(-5px);
+}
+
+.challenge-icon {
+  font-size: 2.5rem;
+}
+
+.challenge-text {
+  color: #b2ebf2;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+/* НАСТРОЙКА КОМАНДЫ */
+.team-setup {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 20px;
+  padding: 40px;
+  border: 2px dashed rgba(255, 255, 255, 0.2);
+  margin-bottom: 50px;
+}
+
+.setup-instructions {
+  margin-bottom: 35px;
+}
+
+.setup-instructions h3 {
+  color: #80deea;
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+}
+
+.setup-instructions p {
+  color: #b2ebf2;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.team-input {
+  margin-bottom: 40px;
+}
+
+.team-input label {
+  display: block;
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  color: #80deea;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.input-icon {
+  font-size: 1.5rem;
+}
+
+.team-input input {
+  width: 100%;
+  padding: 20px 25px;
+  font-size: 1.2rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 3px solid rgba(0, 198, 255, 0.5);
+  border-radius: 15px;
+  color: white;
+  transition: all 0.3s;
+  margin-bottom: 15px;
+}
+
+.team-input input:focus {
+  outline: none;
+  border-color: #00c6ff;
+  box-shadow: 0 0 0 4px rgba(0, 198, 255, 0.2);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.input-hint {
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #b2ebf2;
+  opacity: 0.9;
+  font-style: italic;
+}
+
+.team-ready {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.ready-checklist {
+  flex: 1;
+  min-width: 350px;
+  background: rgba(38, 208, 206, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  border: 2px solid rgba(38, 208, 206, 0.3);
+}
+
+.ready-checklist h4 {
+  color: #26d0ce;
+  margin-bottom: 25px;
+  font-size: 1.4rem;
+}
+
+.checklist-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.checklist-item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.checkmark {
+  color: #26d0ce;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-top: 2px;
+}
+
+.checklist-item span:last-child {
+  color: #e0f7fa;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.start-section {
+  flex: 1;
+  min-width: 350px;
+  text-align: center;
+}
+
+.next-phase-info {
+  background: rgba(0, 198, 255, 0.1);
+  padding: 25px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  border-left: 5px solid #00c6ff;
+}
+
+.next-phase-info h4 {
+  color: #00c6ff;
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+}
+
+.next-phase-info p {
+  color: #b2ebf2;
+  line-height: 1.6;
+}
+
+.btn-start {
+  padding: 25px 50px;
+  font-size: 1.3rem;
+  min-width: 400px;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-start:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 198, 255, 0.3);
+}
+
+.btn-subtext {
+  font-size: 1rem;
+  opacity: 0.9;
+  font-weight: normal;
+}
+
+.time-estimate {
+  color: #ffb347;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+/* БЫСТРЫЕ СОВЕТЫ */
+.quick-tips {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 20px;
+  padding: 40px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.quick-tips h3 {
+  text-align: center;
+  color: #80deea;
+  margin-bottom: 40px;
+  font-size: 1.8rem;
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.tip {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.tip:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0, 198, 255, 0.3);
+}
+
+.tip-icon {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+}
+
+.tip-content h4 {
+  color: white;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.tip-content p {
+  color: #b2ebf2;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 1024px) {
+  .phase-header h2 {
+    font-size: 2.2rem;
+  }
+  
+  .mission-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .team-ready {
+    flex-direction: column;
+  }
+  
+  .ready-checklist, .start-section {
+    width: 100%;
+    min-width: auto;
+  }
+  
+  .btn-start {
+    min-width: auto;
+    width: 100%;
+    padding: 20px 30px;
+  }
+  
+  .tips-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .phase-header {
+    padding: 20px;
+  }
+  
+  .phase-header h2 {
+    font-size: 1.8rem;
+  }
+  
+  .phase-description {
+    font-size: 1.1rem;
+  }
+  
+  .instruction-step {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .step-number {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+  
+  .card-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .spaced-item {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .spaced-item strong {
+    min-width: auto;
+  }
+  
+  .challenges-grid {
+    grid-template-columns: 1fr;
+  }
+}

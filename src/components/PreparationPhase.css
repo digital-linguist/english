@@ -1,0 +1,350 @@
+.preparation-phase {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.cultural-context {
+  margin-bottom: 40px;
+}
+
+.context-box {
+  background: linear-gradient(135deg, rgba(255, 180, 71, 0.1), rgba(255, 65, 108, 0.1));
+  border-radius: 20px;
+  padding: 25px;
+  border: 2px solid rgba(255, 180, 71, 0.3);
+}
+
+.context-box h3 {
+  color: #ffb347;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.context-box p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  color: #e0f7fa;
+}
+
+.context-box ul {
+  list-style: none;
+  padding-left: 20px;
+}
+
+.context-box li {
+  padding: 8px 0;
+  position: relative;
+  color: #b2ebf2;
+}
+
+.context-box li:before {
+  content: '•';
+  color: #ffb347;
+  font-size: 1.5rem;
+  position: absolute;
+  left: -20px;
+  top: 5px;
+}
+
+.smart-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.smart-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 25px;
+  border-top: 5px solid;
+  transition: all 0.3s;
+  height: 100%;
+}
+
+.smart-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.smart-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.smart-letter {
+  width: 60px;
+  height: 60px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  flex-shrink: 0;
+}
+
+.smart-title h3 {
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+  color: white;
+}
+
+.smart-description {
+  color: #b2ebf2;
+  font-size: 0.9rem;
+}
+
+.smart-example {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border-left: 3px solid rgba(255, 255, 255, 0.2);
+}
+
+.example-label {
+  font-weight: 600;
+  color: #80deea;
+  margin-right: 10px;
+}
+
+.example-text {
+  color: #e0f7fa;
+  font-style: italic;
+}
+
+.smart-input label {
+  display: block;
+  margin-bottom: 10px;
+  color: #b2ebf2;
+  font-weight: 500;
+}
+
+.smart-input textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  color: white;
+  font-size: 1rem;
+  line-height: 1.5;
+  resize: vertical;
+  transition: all 0.3s;
+}
+
+.smart-input textarea:focus {
+  outline: none;
+  border-color: rgba(0, 198, 255, 0.5);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.character-count {
+  text-align: right;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 5px;
+}
+
+.cultural-adjustment {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 20px;
+  padding: 30px;
+  margin-bottom: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cultural-adjustment h3 {
+  color: #ffb347;
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+}
+
+.cultural-adjustment > p {
+  color: #b2ebf2;
+  margin-bottom: 25px;
+}
+
+.adjustment-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.adjustment-option {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.adjustment-option:hover {
+  border-color: rgba(0, 198, 255, 0.3);
+  transform: translateY(-3px);
+}
+
+.adjustment-option.selected {
+  border-color: #00c6ff;
+  background: rgba(0, 198, 255, 0.1);
+  box-shadow: 0 10px 20px rgba(0, 198, 255, 0.2);
+}
+
+.option-radio {
+  flex-shrink: 0;
+}
+
+.radio-circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.adjustment-option.selected .radio-circle {
+  border-color: #00c6ff;
+  background: rgba(0, 198, 255, 0.2);
+}
+
+.radio-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #00c6ff;
+}
+
+.option-content h4 {
+  color: white;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+.option-content p {
+  color: #b2ebf2;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.goal-summary {
+  background: linear-gradient(135deg, rgba(0, 198, 255, 0.1), rgba(38, 208, 206, 0.1));
+  border-radius: 20px;
+  padding: 30px;
+  margin-bottom: 40px;
+  border: 2px solid rgba(0, 198, 255, 0.3);
+}
+
+.goal-summary h3 {
+  color: #00c6ff;
+  margin-bottom: 25px;
+  font-size: 1.6rem;
+}
+
+.summary-content {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 25px;
+}
+
+.summary-item {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  gap: 20px;
+}
+
+.summary-item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.summary-key {
+  font-weight: 600;
+  color: #80deea;
+  min-width: 180px;
+  flex-shrink: 0;
+}
+
+.summary-value {
+  color: white;
+  line-height: 1.5;
+  flex: 1;
+}
+
+.action-buttons {
+  text-align: center;
+}
+
+.btn-success {
+  min-width: 400px;
+  padding: 20px 40px;
+}
+
+@media (max-width: 768px) {
+  .smart-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .adjustment-options {
+    grid-template-columns: 1fr;
+  }
+  
+  .summary-item {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .summary-key {
+    min-width: auto;
+  }
+  
+  .btn-success {
+    min-width: auto;
+    width: 100%;
+  }
+
+    /* Увеличиваем отступы */
+  .preparation-phase p {
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+  }
+
+  .smart-card {
+    margin-bottom: 2rem;
+  }
+
+  .cultural-adjustment {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .adjustment-option {
+    margin-bottom: 1.5rem;
+  }
+
+  /* Улучшаем читаемость форм */
+  .smart-input textarea {
+    line-height: 1.6;
+    padding: 1.2rem;
+  }
+
+  .summary-item {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
